@@ -68,7 +68,7 @@ async def flashcards_managing_create_end(message: types.Message, state: FSMConte
             show_card = False
     else:
         await message.answer(f'Вы выбрали не то\n'
-                             'Напишите "Да" или "Нет" или выберете кнопки в боте')
+                             'Напишите "Да" или "Нет" или выберите кнопки в боте')
         await FlashcardManaging.flashcards_managing_create_end.set()
 
     user_data = await state.get_data()
@@ -88,11 +88,11 @@ async def flashcards_managing_del_start(message: types.Message):
     # Список всех карточек. Пример: [(54, "cat", "кошка"),(55, "dog", "собака")]
     all_cards = flashcard_dp_info(message.from_user.id)
     if len(all_cards) == 0:
-        await message.answer(f'У вас нет карточек, которые вы могли бы удалалять\n'
-                             f'Сначала создайте их', reply_markup=flashcard_menu.get_keyboard_flashcard_start())
+        await message.answer('У вас нет карточек, которые вы могли бы удалять\n'
+                             'Сначала создайте их', reply_markup=flashcard_menu.get_keyboard_flashcard_start())
         return
 
-    await message.answer(f'Чтобы удалить карточку - введите её id\n'
+    await message.answer('Чтобы удалить карточку - введите её id\n'
                          'Первый пример: 1\n'
                          'Второй пример: 1 2 5',
                          reply_markup=types.ReplyKeyboardRemove())
