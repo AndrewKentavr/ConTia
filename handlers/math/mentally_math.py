@@ -111,7 +111,7 @@ async def equation_mentally_beginning(message: types.Message, state: FSMContext)
 
 async def equation_mentally(message: types.Message, state: FSMContext):
     """
-    Основаня функция
+    Основаная функция
 
     :param message: Ждёт сообщения соостоящее из цифр. Например "8371"
 
@@ -132,7 +132,7 @@ async def equation_mentally(message: types.Message, state: FSMContext):
 
         # считает количество попыток и прибавляет
         """
-        Cделанно это вначале, чтобы потом отсекать 0 варианты, потому что сообщение может показаться пользователю,
+        Cделано это вначале, чтобы потом отсекать 0 варианты, потому что сообщение может показаться пользователю,
             а он просто без попыток закончит тренировку
         """
         cc = int(attempts[-1]) + 1
@@ -227,7 +227,7 @@ def equation_generate():
 
 def register_handlers_math_mentally(dp: Dispatcher):
     """
-    Если меняете алгоритм, то незабудьте поменять state в таймере
+    Если меняете алгоритм, то не забудьте поменять state в таймере
     """
     dp.register_message_handler(equation_mentally_start,
                                 Text(equals=emoji.emojize(":brain:") + ' Примеры для подсчёта в уме'), state='*')

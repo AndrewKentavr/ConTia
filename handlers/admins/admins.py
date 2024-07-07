@@ -7,7 +7,7 @@ from handlers.keyboards.default.admin_menu import admin_start_menu
 
 async def admin_start(message: types.Message, state: FSMContext):
     await state.finish()
-    await message.answer('Выберете:', reply_markup=admin_start_menu())
+    await message.answer('Выберите:', reply_markup=admin_start_menu())
 
 
 def register_handlers_send_msg(dp: Dispatcher):

@@ -45,7 +45,7 @@ async def send_message_middle(message: types.Message, state: FSMContext):
     c.append(user_data['msg'])
     await state.update_data(c=c)
 
-    await message.answer('Вы уверенные что хотите отправить это сообщение?', reply_markup=choose_send())
+    await message.answer('Вы уверены что хотите отправить это сообщение?', reply_markup=choose_send())
     await AdminSendMessage.main_message_3.set()
 
 

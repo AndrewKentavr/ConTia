@@ -69,7 +69,7 @@ async def timer_create_end(message: types.Message, state: FSMContext):
             timer_create_dp(message.from_user.id, user_data["time"], msg)
             await message.reply('Таймер успешно установлен', reply_markup=timer_menu.get_keyboard_timer())
         except Exception:
-            await message.answer(f'Что - то пошло не так')
+            await message.answer('Что-то пошло не так')
         await state.finish()
 
     else:
