@@ -23,7 +23,7 @@ async def tasks_category_logic_start(message: types.Message, state: FSMContext):
                          reply_markup=logic_menu_inline.get_inline_logic_problems_category())
 
     link_endrey = hlink('в этот телеграм', 'https://t.me/Endrey_k')
-    await message.answer(f'<u>Если задание неправильное или неправильно выводиться, то прошу написать {link_endrey}</u>'
+    await message.answer(f'<u>Если задание неправильное или неправильно выводится, то прошу написать {link_endrey}</u>'
                          ' сообщение вида:\n'
                          '(категория) - (id задачи или название) - (и часть условия)\n'
                          'Например: Математика - 35793 - Дан тетраэдр, у которого пери...',
